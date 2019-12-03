@@ -64,6 +64,12 @@ const RootQuery = new GraphQLObjectType({
       resolve(parent, args) {
         return Cartoon.find({});
       }
+    },
+    channels: {
+      type: GraphQLList(ChannelType),
+      resolve(parent, args) {
+        return Channel.find({});
+      }
     }
   })
 });
